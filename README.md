@@ -1,4 +1,4 @@
-<h1> Dumbtree Project /h1>
+<h1> Dumbtree Project </h1>
 Hosted on: https://dumbtree.herokuapp.com/
 
 
