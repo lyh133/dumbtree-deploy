@@ -58,7 +58,7 @@ Hosted on: https://dumbtree.herokuapp.com/
   * store user uploaded files to firebase cloud. 
   * link ads with user
   * make it responsive
-  *  
+  
 
   
 
