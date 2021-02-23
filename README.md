@@ -12,6 +12,11 @@ How to run:
   3. go to 'client' folder and run 'npm start' to start development build
 
 
+technologies used:
+  Mongodb cloud as database
+  Reactjs as front-end
+  nodejs as back-end
+  opencagedata api for getting user location
 
 
 
