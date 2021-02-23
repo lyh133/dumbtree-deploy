@@ -4,6 +4,8 @@ import './SigninScreen.css';
 import Header2 from '../components/Header2';
 import { Link, useHistory } from 'react-router-dom';
 import { SignIn } from '../actions/userActions';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 export default function SigninScreen(props) {
     const history = useHistory();
     const [email, setEmail] = useState('');
@@ -15,7 +17,7 @@ export default function SigninScreen(props) {
 
     
     const userSignin = useSelector((state) => state.userSignin);
-    const { userInfo } = userSignin;
+    const {loading ,error, userInfo } = userSignin;
     const redirectLink = useSelector((state) => state.redirectLink);
     const { redirect } = redirectLink;
 
@@ -23,6 +25,7 @@ export default function SigninScreen(props) {
     const submitHandler = (event) => {
         event.preventDefault();
         dispatch(SignIn(email,password))
+        
     }
 
 
@@ -46,6 +49,8 @@ export default function SigninScreen(props) {
                     <h1  className="signin-text">
                         <span>Sign in</span>
                     </h1>
+                    {loading && <LoadingBox />}
+                    {error && <MessageBox variant="danger">{error}</MessageBox>}
                 </div>
 
                 <div className="signin-info-container">
@@ -71,7 +76,7 @@ export default function SigninScreen(props) {
                     </div>
 
                     <div className="signin-signin">Don't have an account?
-                        <Link to="/signin" >Register now</Link>
+                        <Link to="/register" >Register now</Link>
                     </div>
 
                 </div>
