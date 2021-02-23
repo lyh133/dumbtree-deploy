@@ -1,8 +1,8 @@
-Dumbtree Project
+<h1> Dumbtree Project /h1>
 Hosted on: https://dumbtree.herokuapp.com/
 
 
-<h1> MERN fullstack gumtree clone app for study purpose only. </h1>
+<h3> MERN fullstack gumtree clone app for study purpose only. </h3>
 
 
 How to run:
