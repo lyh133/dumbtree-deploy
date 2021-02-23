@@ -23,6 +23,7 @@ Hosted on: https://dumbtree.herokuapp.com/
  * express frame work
  * Reactjs as front-end
  * nodejs as back-end
+ * react-redux
  * opencagedata api for geodecode to get user location
  * google firebase cloud (removed)
   
