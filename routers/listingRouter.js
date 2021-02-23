@@ -2,7 +2,8 @@ import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import data from '../data.js';
 import Listing from '../models/listingModel.js'; 
-import process from 'process';
+import path from 'path';
+const __dirname = path.resolve();
 const listingRouter = express.Router();
 
 listingRouter.get('/', expressAsyncHandler(async (req,res) => {
@@ -69,8 +70,7 @@ listingRouter.post('/upload', (req,res) => {
         return res.status(400).send({message: 'No file uploaded'})
     }
     const file = req.files.file;
-    console.log(file.name)
-    file.mv(`../public/images/${file.name}`, err=>{
+    file.mv(`${__dirname}/client/build/images/${file.name}`, err=>{
         if(err) {
             console.error(err);
             return res.status(400).send(err);

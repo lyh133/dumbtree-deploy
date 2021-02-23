@@ -14,6 +14,8 @@ import { HOME_LISTINGS_REQUEST,
                         
         } from "../constants/listingConstants";
 
+import { firebase_app } from '../firebase.js';
+
 export const Listings_all = () => async (dispatch) => {
     dispatch({
         type: HOME_LISTINGS_REQUEST
@@ -61,11 +63,10 @@ export const createListing = (title,category,image,price,location,detail,negotia
 
 }
 
-
+//this is to backend currently not used
 export const uploadFile = (file) => async (dispatch) => {
 
     dispatch({ type: UPLOAD_FILE_REQUEST});
-    console.log(file)
     try {
         const formData = new FormData();
         formData.append('file',file)
@@ -74,6 +75,26 @@ export const uploadFile = (file) => async (dispatch) => {
               'Content-Type': 'multipart/form-data'
             }})
         dispatch({ type: UPLOAD_FILE_SUCCESS, payload: data})
+    } catch (error) {
+        dispatch({ type: UPLOAD_FILE_FAIL, payload:(
+            error.response && error.response.data.message 
+            ? error.response.data.message 
+            : error.message)})
+    }
+
+}
+export const uploadFirebase = (file) => async (dispatch) => {
+
+    dispatch({ type: UPLOAD_FILE_REQUEST});
+    try {
+
+        const storageRef = firebase_app.storage().ref();
+        const fileRef = storageRef.child(file.name);
+        fileRef.put(file).then(() => {
+            console.log("uploaded to firebase", file.name)
+        })
+
+        dispatch({ type: UPLOAD_FILE_SUCCESS, payload: {}})
     } catch (error) {
         dispatch({ type: UPLOAD_FILE_FAIL, payload:(
             error.response && error.response.data.message 
