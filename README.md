@@ -5,7 +5,7 @@ Hosted on: https://dumbtree.herokuapp.com/
 <h3> MERN fullstack gumtree clone app for study purpose only. </h3>
 
 
-**How to run:
+**How to run:**
 
   1. run 'npm install' to install modules
   2. in the root folder run 'node server' to start the server, 
