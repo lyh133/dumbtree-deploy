@@ -14,7 +14,7 @@ How to run:
 
 technologies used:
 
- *Mongodb cloud as database
+ * Mongodb cloud as database
   express frame work
   Reactjs as front-end
   nodejs as back-end
