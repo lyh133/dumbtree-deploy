@@ -2,8 +2,8 @@ Dumbtree Project
 Hosted on: https://dumbtree.herokuapp.com/
 
 
-
 MERN fullstack gumtree clone app for study purpose only.
+
 
 How to run:
 
@@ -13,10 +13,26 @@ How to run:
 
 
 technologies used:
+
   Mongodb cloud as database
+  express frame work
   Reactjs as front-end
   nodejs as back-end
-  opencagedata api for getting user location
+  opencagedata api for geodecode to get user location
+  
+  
+Functionality implemented so far are:
+  view ads/post ads , signin/signout/register
+  favourite ad/view history
+  filter ad by location,title,catagory,price,price type
+
+unimplemented functionalities:
+  delete ad/modify ad
+  admin features
+  login by google
+  
+
+  
 
 
 
