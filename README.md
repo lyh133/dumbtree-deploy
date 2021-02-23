@@ -2,7 +2,7 @@ Dumbtree Project
 Hosted on: https://dumbtree.herokuapp.com/
 
 
-<h1> MERN fullstack gumtree clone app for study purpose only.
+<h1> MERN fullstack gumtree clone app for study purpose only. </h1>
 
 
 How to run:
