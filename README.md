@@ -15,7 +15,9 @@ Hosted on: https://dumbtree.herokuapp.com/
   3. go to 'client' folder and run 'npm start' to start development build
 
 
-** technologies used: **
+
+
+**Technologies used:**
 
  * Mongodb cloud as database
  * express frame work
@@ -24,16 +26,39 @@ Hosted on: https://dumbtree.herokuapp.com/
  * opencagedata api for geodecode to get user location
   
   
-**Functionality implemented so far are: **
+  
+  
+**Functionality implemented so far are:**
  * view ads/post ads , signin/signout/register
  * favourite ad/view history
  * filter ad by location,title,catagory,price,price type
 
-**unimplemented functionalities:**
+
+
+
+
+**Unimplemented functionalities:**
  * delete ad/modify ad
  * admin features
  * login by google
+ * ad owner section / my ads page
+ * contact owner/chat system
+ * search by nearby location ( +5km +10km thingy)
+ * a lot of other details.....
   
+  
+  
+  
+ **Known bugs:**
+  * sometimes user location don't re-render automatically. refresh is needed
+ 
+ 
+ 
+ **Future improvemnents**
+  * store user uploaded files to firebase cloud. 
+  * link ads with user
+  * make it responsive
+  *  
 
   
 
