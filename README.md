@@ -57,6 +57,7 @@ Hosted on: https://dumbtree.herokuapp.com/
  
  
  **Future improvemnents**
+  * store the api key in the hosted sites environment variable instead of in the code 
   * store user uploaded files to firebase cloud. 
   * link ads with user
   * make it responsive
